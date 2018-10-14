@@ -1,0 +1,21 @@
+IF OBJECT_ID('tblAddressList')IS NOT NULL DROP TABLE tblAddressList
+
+
+GO
+CREATE TABLE tblAddressList(
+	Id INT IDENTITY(1, 1) NOT NULL,
+	ClientId INT NOT NULL,
+	Street NVARCHAR(1000) NULL,
+	Barangay NVARCHAR(1000) NULL,
+	CityId INT NULL,
+	ProvinceId INT NULL,
+	CountryId INT NULL,
+	ZipCode NVARCHAR(255) NULL,
+	OwnershipId INT NULL,
+	StayedSince NVARCHAR(1000) NULL,
+	Landmark NVARCHAR(1000) NULL,
+	CONSTRAINT PK_tblAddressList PRIMARY KEY (Id),
+)
+
+
+GO

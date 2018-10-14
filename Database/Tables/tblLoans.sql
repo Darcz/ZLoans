@@ -1,0 +1,16 @@
+IF OBJECT_ID('tblLoans')IS NOT NULL DROP TABLE tblLoans
+
+
+GO
+CREATE TABLE tblLoans(
+	Id INT IDENTITY(1, 1) NOT NULL,
+	ClientId INT NOT NULL,
+	LoanTypeId INT NOT NULL,
+	LoanStatusId INT NOT NULL,
+	BranchId INT NOT NULL,
+	Active BIT NOT NULL CONSTRAINT DF_tblLoansClients_Active DEFAULT(1),
+	CONSTRAINT PK_tblLoans PRIMARY KEY (Id),
+)
+
+
+GO

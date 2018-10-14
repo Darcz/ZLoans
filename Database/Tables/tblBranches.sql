@@ -1,0 +1,15 @@
+IF OBJECT_ID('tblBranches')IS NOT NULL DROP TABLE tblBranches
+
+
+GO
+CREATE TABLE tblBranches(
+	Id INT IDENTITY(1, 1) NOT NULL,
+	Code NVARCHAR(1000) NOT NULL,
+	Name NVARCHAR(1000) NOT NULL,
+	AreaId INT NULL,
+	Active BIT NOT NULL CONSTRAINT DF_tblBranchesClients_Active DEFAULT(1),
+	CONSTRAINT PK_tblBranches PRIMARY KEY (Id),
+)
+
+
+GO
